@@ -1,0 +1,68 @@
+<script type="text/html" data-template-name="npmapi">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span
+                data-i18n="node-red:common.label.name"></span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]node-red:common.label.name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-api"><i class="fa "></i> api</label>
+        <input type="text"
+               id="node-input-api"
+               placeholder="api : repo or maintainer">
+    </div>
+    <div class="form-row">
+        <label for="node-input-func"><i class="fa "></i> func</label>
+        <input type="text"
+               id="node-input-func"
+               placeholder="func : version, dependencies, devDependencies, prop, repos">
+    </div>
+    <div class="form-row">
+        <label for="node-input-mname"><i class="fa "></i> mname</label>
+        <input type="text"
+               id="node-input-mname"
+               placeholder="mname : repo name or maintainer username">
+    </div>
+
+</script>
+
+<script type="text/html" data-help-name="npmapi">
+    <p>Summary of the node.</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload<span class="property-type">object</span></dt>
+        <dd>Explanation of payload.</dd>
+        <dt class="optional">topic <span class="property-type">string</span></dt>
+        <dd>Explanation of topic.</dd>
+    </dl>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload<span class="property-type">object</span></dt>
+        <dd>Explanation of payload.</dd>
+        <dt class="optional">topic<span class="property-type">string</span></dt>
+        <dd>Explanation of topic.</dd>
+    </dl>
+    <h3>Details</h3>
+    <p>Explanation of the details.</p>
+    <p><b>Note</b>: Note of the node.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('npmapi', {
+        color: '#cb0000',
+        category: 'function',
+        defaults: {
+            name: {value: ''},
+            api: {value: "", required: false},
+            mname: {value: "", required: false},
+            func: {value: "", required: false},
+            param: {value: "", required: false},
+        },
+        inputs: 1,
+        outputs: 1,
+        label: function () {
+            return this.name || 'npmapi';
+        },
+        icon: 'icon.png',
+        align: 'left'
+    });
+</script>
