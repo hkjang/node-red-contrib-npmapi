@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-npmapi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node-RED node for npmapi",
   "main": "node.js",
   "scripts": {
@@ -18,7 +18,15 @@
     "npmjs",
     "npmapi"
   ],
-  "devDependencies": {
+  "homepage": "https://github.com/hkjang/node-red-contrib-npmapi#readme",
+  "bugs": {
+    "url": "https://github.com/hkjang/node-red-contrib-npmapi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hkjang/node-red-contrib-npmapi.git"
+  },
+  "dependencies": {
     "npm-api": "^1.0.1"
   },
   "license": "Apache-2.0"
