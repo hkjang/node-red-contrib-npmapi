@@ -11,7 +11,7 @@ module.exports = function (RED) {
         this.on('input', function (msg) {
             for (var i in msg) {
                 if (i !== 'req' | i !== 'res' | i !== 'payload' | i !== 'send' | i !== '_msgid') {
-                    node[i] = node[i] || msg[i];
+                    node[i] = msg[i] || node[i];
                 }
             }
             const api = npm[node.api](node.mname);
